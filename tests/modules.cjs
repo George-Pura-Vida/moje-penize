@@ -1,0 +1,11 @@
+const assert = require('node:assert/strict');
+const {goalPlan, allocationPlan} = require('../assets/app.js');
+assert.equal(goalPlan(120000, 24000, 12), 8000);
+assert.equal(goalPlan(100, 200, 12), 0);
+const plan = allocationPlan([{value:700,target:50},{value:300,target:50}]);
+assert.equal(plan[0].delta, -200);
+assert.equal(plan[1].delta, 200);
+assert.throws(() => allocationPlan([{value:1,target:90}]));
+assert.throws(() => allocationPlan([{value:-1,target:100}]));
+assert.equal(allocationPlan([{value:0,target:100}])[0].current, 0);
+console.log('Module calculations passed');

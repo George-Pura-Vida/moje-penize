@@ -6,7 +6,7 @@ import zipfile
 
 root = Path(__file__).resolve().parents[1]
 files = ['install.php', 'index.html', 'robots.txt', 'api/health.php',
-         'lib/bootstrap.php', 'lib/schema.php', 'assets/app.css', 'assets/app.js',
+         'lib/bootstrap.php', 'lib/schema.php', 'assets/app.css', 'assets/app.js', 'assets/favicon.svg',
          'sql/mysql/001_schema.sql', 'sql/mysql/002_modules.sql', 'sql/mysql/003_dashboard.sql']
 dist = root / 'dist'
 dist.mkdir(exist_ok=True)
