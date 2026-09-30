@@ -27,6 +27,10 @@ jobs:
           php tests/calculation_engine.php
           php tests/ce_fixtures.php
           php tests/ce_http.php
+      - name: ComparisonModel v1 C01-C10
+        run: php tests/comparison_model.php
+      - name: ComparisonModel C01-C03 GOLDEN_LOCKED fixture verification
+        run: php tests/comparison_golden.php
       - name: Initialization, retry, health and public lock
         env:
           TEST_DB_PASSWORD: disposable-ci-password
