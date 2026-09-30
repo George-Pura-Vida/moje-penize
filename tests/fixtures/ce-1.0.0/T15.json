@@ -1,0 +1,197 @@
+{
+  "id": "T15",
+  "description": "Fail closed input validation",
+  "status": "ACTIVE",
+  "cases": [
+    {
+      "id": "T15.01",
+      "input": {
+        "horizon_years": 0,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      },
+      "expected_error": "HORIZON_OUT_OF_RANGE"
+    },
+    {
+      "id": "T15.02",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": -1,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      },
+      "expected_error": "INFLATION_OUT_OF_RANGE"
+    },
+    {
+      "id": "T15.03",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": -1,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      },
+      "expected_error": "INITIAL_CONTRIBUTION_NEGATIVE"
+    },
+    {
+      "id": "T15.04",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": -1,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      },
+      "expected_error": "MONTHLY_CONTRIBUTION_NEGATIVE"
+    },
+    {
+      "id": "T15.05",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": -1,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      },
+      "expected_error": "ANNUAL_RETURN_OUT_OF_RANGE"
+    },
+    {
+      "id": "T15.06",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 1.01,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      },
+      "expected_error": "ENTRY_FEE_INITIAL_OUT_OF_RANGE"
+    },
+    {
+      "id": "T15.07",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": -0.01,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      },
+      "expected_error": "ENTRY_FEE_MONTHLY_OUT_OF_RANGE"
+    },
+    {
+      "id": "T15.08",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 1,
+        "fixed_fee_monthly": 0
+      },
+      "expected_error": "ONGOING_FEE_OUT_OF_RANGE"
+    },
+    {
+      "id": "T15.09",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": -1
+      },
+      "expected_error": "FIXED_FEE_NEGATIVE"
+    },
+    {
+      "id": "T15.10",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0,
+        "snapshot_years": [
+          2
+        ]
+      },
+      "expected_error": "SNAPSHOT_OUT_OF_RANGE"
+    },
+    {
+      "id": "T15.11",
+      "input": {
+        "horizon_years": 1,
+        "inflation_rate": 0,
+        "initial_contribution": 10000,
+        "monthly_contribution": 0,
+        "annual_return": 0,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0,
+        "assets": [
+          {
+            "id": "a",
+            "initial_contribution": 10000,
+            "monthly_contribution": 0,
+            "annual_return": 0,
+            "entry_fee_initial_pct": 0,
+            "entry_fee_monthly_pct": 0,
+            "ongoing_fee_pct_pa": 0,
+            "fixed_fee_monthly": 0
+          },
+          {
+            "id": "a",
+            "initial_contribution": 10000,
+            "monthly_contribution": 0,
+            "annual_return": 0,
+            "entry_fee_initial_pct": 0,
+            "entry_fee_monthly_pct": 0,
+            "ongoing_fee_pct_pa": 0,
+            "fixed_fee_monthly": 0
+          }
+        ]
+      },
+      "expected_error": "DUPLICATE_ASSET_ID"
+    }
+  ]
+}

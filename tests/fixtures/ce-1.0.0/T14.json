@@ -1,0 +1,70 @@
+{
+  "id": "T14",
+  "description": "Two assets aggregation",
+  "status": "ACTIVE",
+  "input": {
+    "horizon_years": 10,
+    "inflation_rate": 0.02,
+    "assets": [
+      {
+        "id": "gold",
+        "initial_contribution": 20000,
+        "monthly_contribution": 0,
+        "annual_return": 0.04,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      },
+      {
+        "id": "fund",
+        "initial_contribution": 0,
+        "monthly_contribution": 1000,
+        "annual_return": 0.07,
+        "entry_fee_initial_pct": 0,
+        "entry_fee_monthly_pct": 0.01,
+        "ongoing_fee_pct_pa": 0,
+        "fixed_fee_monthly": 0
+      }
+    ]
+  },
+  "expected": {
+    "nominal_value": 198946.099642,
+    "real_value": 163205.094608,
+    "cumulative_contributions": 140000.0,
+    "cumulative_entry_fees": 1200.0,
+    "cumulative_ongoing_fees": 0.0,
+    "cumulative_fixed_fees": 0.0,
+    "cumulative_total_fees": 1200.0,
+    "net_gain": 58946.099642,
+    "assets": {
+      "gold": {
+        "nominal_value": 29604.885698,
+        "real_value": 24286.317651,
+        "cumulative_contributions": 20000.0,
+        "cumulative_entry_fees": 0.0,
+        "cumulative_ongoing_fees": 0.0,
+        "cumulative_fixed_fees": 0.0,
+        "cumulative_total_fees": 0.0,
+        "net_gain": 9604.885698
+      },
+      "fund": {
+        "nominal_value": 169341.213944,
+        "real_value": 138918.776957,
+        "cumulative_contributions": 120000.0,
+        "cumulative_entry_fees": 1200.0,
+        "cumulative_ongoing_fees": 0.0,
+        "cumulative_fixed_fees": 0.0,
+        "cumulative_total_fees": 1200.0,
+        "net_gain": 49341.213944
+      }
+    },
+    "engine_version": "1.0.0",
+    "success": true,
+    "calculation_status": "OK"
+  },
+  "tolerance": {
+    "money_abs": 0.01,
+    "zero_abs": 0.01
+  }
+}
