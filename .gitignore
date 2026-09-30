@@ -6,3 +6,5 @@ config.php
 vendor/
 node_modules/
 *.log
+dist/
+__pycache__/
