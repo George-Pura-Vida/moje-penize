@@ -5,7 +5,7 @@
 - Větev main na commitu `0b372de498c5650e8d9dbb076a196ab2b3c30127` obsahovala původní instalátor s kontrolou `.installed`. Lokální úprava z předchozího chatu v tomto commitu není.
 - Repozitář neměl žádný GitHub Actions deploy ani záznam běhu. Změna na GitHubu sama o sobě nedokazuje změnu na hostingu.
 - Produkční `/api/health.php` vrátil HTTP 200 a `{"ok":true,"database":"connected","tables":10}`. Počet odpovídá devíti tabulkám a jednomu pohledu, ale původní kontrola jejich názvy ani verze neověřuje.
-- Produkční `/install.php` při této kontrole vrátil HTTP 500 s prázdným tělem. Původní hlášku o zámku se nepodařilo reprodukovat. Bez serverového logu a souborů nelze určit, zda jde o jinou cestu, chybu PHP nebo cache.
+- Produkční `/install.php` vrátil HTTP 500 s prázdným tělem. Přímá kontrola souboru v přihlášeném WebKitty potvrdila lokálně upravenou verzi bez kontroly zámku, s neplatným koncovým `}S`. Toto nadbytečné S způsobuje syntaktickou chybu PHP. Subdoména správně míří na `public_html/mojepenize`; `.installed` je přítomen. Původní hláška o zámku neprokazuje chybný document root ani starou cache.
 
 ## Nasazení opravy
 
@@ -28,3 +28,4 @@ Bez SSH/CLI použijte po záloze SQL konzoli hostingu pro tři soubory `sql/mysq
 ## Ověření změn
 
 Workflow `Check MySQL installation` používá izolovanou MySQL 8.0 a testovací konfiguraci. Testuje částečnou instalaci, opakování s existujícími daty, obnovu chybějícího pohledu, HTTP 503 před dokončením, HTTP 200 po dokončení a HTTP 403 instalátoru i bez `.installed`. Nevytváří připojení k produkci a nic nenasazuje.
+
