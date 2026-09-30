@@ -20,7 +20,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: PHP syntax
         run: find . -name '*.php' -print0 | xargs -0 -n1 php -l
-      - name: CE-1.0.0 calculation engine, fixtures and HTTP contract
+      - name: Modelation frontend contract
+        run: node tests/modelation_frontend.js
+      - name: CE-1.0.0 calculation engine, fixtures T01-T15 and HTTP contract
         run: |
           php tests/calculation_engine.php
           php tests/ce_fixtures.php
