@@ -1,0 +1,45 @@
+{
+  "id": "T11",
+  "description": "Negative return above minus one",
+  "status": "ACTIVE",
+  "input": {
+    "horizon_years": 5,
+    "inflation_rate": 0,
+    "initial_contribution": 10000,
+    "monthly_contribution": 0,
+    "annual_return": -0.2,
+    "entry_fee_initial_pct": 0,
+    "entry_fee_monthly_pct": 0,
+    "ongoing_fee_pct_pa": 0,
+    "fixed_fee_monthly": 0
+  },
+  "expected": {
+    "nominal_value": 3276.8,
+    "real_value": 3276.8,
+    "cumulative_contributions": 10000.0,
+    "cumulative_entry_fees": 0.0,
+    "cumulative_ongoing_fees": 0.0,
+    "cumulative_fixed_fees": 0.0,
+    "cumulative_total_fees": 0.0,
+    "net_gain": -6723.2,
+    "assets": {
+      "asset_1": {
+        "nominal_value": 3276.8,
+        "real_value": 3276.8,
+        "cumulative_contributions": 10000.0,
+        "cumulative_entry_fees": 0.0,
+        "cumulative_ongoing_fees": 0.0,
+        "cumulative_fixed_fees": 0.0,
+        "cumulative_total_fees": 0.0,
+        "net_gain": -6723.2
+      }
+    },
+    "engine_version": "1.0.0",
+    "success": true,
+    "calculation_status": "OK"
+  },
+  "tolerance": {
+    "money_abs": 0.01,
+    "zero_abs": 0.01
+  }
+}

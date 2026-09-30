@@ -1,0 +1,45 @@
+{
+  "id": "T13",
+  "description": "Frozen golden case",
+  "status": "GOLDEN_LOCKED",
+  "input": {
+    "horizon_years": 20,
+    "inflation_rate": 0.025,
+    "initial_contribution": 100000,
+    "monthly_contribution": 5000,
+    "annual_return": 0.08,
+    "entry_fee_initial_pct": 0.02,
+    "entry_fee_monthly_pct": 0.01,
+    "ongoing_fee_pct_pa": 0.012,
+    "fixed_fee_monthly": 50
+  },
+  "expected": {
+    "nominal_value": 2763704.315614,
+    "real_value": 1686608.438473,
+    "cumulative_contributions": 1300000,
+    "cumulative_entry_fees": 14000.0,
+    "cumulative_ongoing_fees": 278051.275379,
+    "cumulative_fixed_fees": 12000.0,
+    "cumulative_total_fees": 304051.275379,
+    "net_gain": 1463704.315614,
+    "assets": {
+      "asset_1": {
+        "nominal_value": 2763704.315614,
+        "real_value": 1686608.438473,
+        "cumulative_contributions": 1300000.0,
+        "cumulative_entry_fees": 14000.0,
+        "cumulative_ongoing_fees": 278051.275379,
+        "cumulative_fixed_fees": 12000.0,
+        "cumulative_total_fees": 304051.275379,
+        "net_gain": 1463704.315614
+      }
+    },
+    "engine_version": "1.0.0",
+    "success": true,
+    "calculation_status": "OK"
+  },
+  "tolerance": {
+    "money_abs": 0.01,
+    "zero_abs": 0.01
+  }
+}

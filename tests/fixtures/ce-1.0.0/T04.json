@@ -1,0 +1,45 @@
+{
+  "id": "T04",
+  "description": "Inflation discount",
+  "status": "ACTIVE",
+  "input": {
+    "horizon_years": 10,
+    "inflation_rate": 0.025,
+    "initial_contribution": 10000,
+    "monthly_contribution": 0,
+    "annual_return": 0.05,
+    "entry_fee_initial_pct": 0,
+    "entry_fee_monthly_pct": 0,
+    "ongoing_fee_pct_pa": 0,
+    "fixed_fee_monthly": 0
+  },
+  "expected": {
+    "nominal_value": 16288.946268,
+    "real_value": 12724.89879,
+    "cumulative_contributions": 10000.0,
+    "cumulative_entry_fees": 0.0,
+    "cumulative_ongoing_fees": 0.0,
+    "cumulative_fixed_fees": 0.0,
+    "cumulative_total_fees": 0.0,
+    "net_gain": 6288.946268,
+    "assets": {
+      "asset_1": {
+        "nominal_value": 16288.946268,
+        "real_value": 12724.89879,
+        "cumulative_contributions": 10000.0,
+        "cumulative_entry_fees": 0.0,
+        "cumulative_ongoing_fees": 0.0,
+        "cumulative_fixed_fees": 0.0,
+        "cumulative_total_fees": 0.0,
+        "net_gain": 6288.946268
+      }
+    },
+    "engine_version": "1.0.0",
+    "success": true,
+    "calculation_status": "OK"
+  },
+  "tolerance": {
+    "money_abs": 0.01,
+    "zero_abs": 0.01
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "T10",
+  "description": "Zero investment with fixed fee capped at balance",
+  "status": "ACTIVE",
+  "input": {
+    "horizon_years": 1,
+    "inflation_rate": 0,
+    "initial_contribution": 0,
+    "monthly_contribution": 0,
+    "annual_return": 0,
+    "entry_fee_initial_pct": 0,
+    "entry_fee_monthly_pct": 0,
+    "ongoing_fee_pct_pa": 0,
+    "fixed_fee_monthly": 50
+  },
+  "expected": {
+    "nominal_value": 0.0,
+    "real_value": 0.0,
+    "cumulative_contributions": 0.0,
+    "cumulative_entry_fees": 0.0,
+    "cumulative_ongoing_fees": 0.0,
+    "cumulative_fixed_fees": 0.0,
+    "cumulative_total_fees": 0.0,
+    "net_gain": 0.0,
+    "assets": {
+      "asset_1": {
+        "nominal_value": 0.0,
+        "real_value": 0.0,
+        "cumulative_contributions": 0.0,
+        "cumulative_entry_fees": 0.0,
+        "cumulative_ongoing_fees": 0.0,
+        "cumulative_fixed_fees": 0.0,
+        "cumulative_total_fees": 0.0,
+        "net_gain": 0.0
+      }
+    },
+    "engine_version": "1.0.0",
+    "success": true,
+    "calculation_status": "OK"
+  },
+  "tolerance": {
+    "money_abs": 0.01,
+    "zero_abs": 1e-06
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "T03",
+  "description": "Zero return and fees",
+  "status": "ACTIVE",
+  "input": {
+    "horizon_years": 10,
+    "inflation_rate": 0,
+    "initial_contribution": 5000,
+    "monthly_contribution": 100,
+    "annual_return": 0,
+    "entry_fee_initial_pct": 0,
+    "entry_fee_monthly_pct": 0,
+    "ongoing_fee_pct_pa": 0,
+    "fixed_fee_monthly": 0
+  },
+  "expected": {
+    "nominal_value": 17000.0,
+    "real_value": 17000.0,
+    "cumulative_contributions": 17000.0,
+    "cumulative_entry_fees": 0.0,
+    "cumulative_ongoing_fees": 0.0,
+    "cumulative_fixed_fees": 0.0,
+    "cumulative_total_fees": 0.0,
+    "net_gain": 0.0,
+    "assets": {
+      "asset_1": {
+        "nominal_value": 17000.0,
+        "real_value": 17000.0,
+        "cumulative_contributions": 17000.0,
+        "cumulative_entry_fees": 0.0,
+        "cumulative_ongoing_fees": 0.0,
+        "cumulative_fixed_fees": 0.0,
+        "cumulative_total_fees": 0.0,
+        "net_gain": 0.0
+      }
+    },
+    "engine_version": "1.0.0",
+    "success": true,
+    "calculation_status": "OK"
+  },
+  "tolerance": {
+    "money_abs": 0.01,
+    "zero_abs": 1e-06
+  }
+}
