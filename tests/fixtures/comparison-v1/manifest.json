@@ -1,0 +1,10 @@
+{
+  "schema_version": "comparison-golden-manifest-1.0.0",
+  "engine_version": "1.0.0",
+  "status": "GOLDEN_LOCKED",
+  "fixtures": {
+    "C01": {"status":"GOLDEN_LOCKED","expected":"C01/expected.json","sha256":"4991ccc9ced6afb817383c30ea6c79964afcfbe95e470f014659006b72521d8c"},
+    "C02": {"status":"GOLDEN_LOCKED","expected":"C02/expected.json","sha256":"0f5a27823a796e91efe92cdfdd20cf51d9849ae886214a9dd8a48254a97f97e9"},
+    "C03": {"status":"GOLDEN_LOCKED","expected":"C03/expected.json","sha256":"f448d15a4a31f7988646fffc6a47b9b978383192630cf9d7da14eec334d7b7e7"}
+  }
+}
