@@ -1,0 +1,10 @@
+BEGIN;
+CREATE EXTENSION IF NOT EXISTS pgtap;
+SELECT plan(5);
+SELECT has_table('client_care_plans','care plans exist');
+SELECT has_table('client_care_meetings','care meetings exist');
+SELECT has_table('client_care_follow_ups','follow ups exist');
+SELECT has_table('client_care_feedback','feedback exists');
+SELECT has_table('money_rebalancing_plans','rebalancing exists');
+SELECT * FROM finish();
+ROLLBACK;

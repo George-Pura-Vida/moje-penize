@@ -1,0 +1,1 @@
+document.querySelectorAll("button[data-module]").forEach(b=>b.addEventListener("click",()=>{document.getElementById("message").textContent="Modul „"+b.closest("article").querySelector("h2").textContent+"“ je připraven v datovém modelu. Další krok: připojit PostgreSQL a aplikační backend.";}));
