@@ -28,7 +28,7 @@
   }
 
   function page() {
-    return `<section class="hero"><p class="eyebrow">CE-1.0.0</p><h1 tabindex="-1">Nová modelace</h1><p>Zadejte parametry modelace. Procenta zadáváte běžně (např. 5 %); před odesláním se převedou na desetinná čísla (0,05).</p></section>
+    return `<section class="hero"><p class="eyebrow">CE-1.0.0</p><h1 tabindex="-1">Nová modelace</h1><p>Zadejte parametry modelace. Procenta zadáváte běžně (např. 5 %); před odesláním se převedou na desetinná čísla (0,05).</p><p class="hint">Po kliknutí na „Spočítat modelaci“ se zadané vstupy odešlou na server pouze ke zpracování výpočtu. Nejsou součástí lokálně ukládaných záznamů aplikace.</p></section>
     <form id="modelation-form" novalidate>
       <section class="card"><h2>Základní parametry</h2><div class="fields">
         <label>Horizont (roky)<input name="horizon_years" type="number" min="1" max="100" step="1" value="10" required><span class="error field-error" data-error-for="horizon_years"></span></label>
