@@ -1,0 +1,3 @@
+<?php
+// Copy on the server to config.php and insert the DB password there. Never commit config.php.
+return require __DIR__.'/config.example.php';

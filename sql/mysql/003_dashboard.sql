@@ -1,0 +1,2 @@
+CREATE OR REPLACE VIEW v_care_dashboard AS SELECT SUM(status IN ('OPEN','IN_PROGRESS') AND due_at < NOW()) overdue,SUM(status IN ('OPEN','IN_PROGRESS') AND due_at >= NOW() AND due_at < DATE_ADD(NOW(),INTERVAL 7 DAY)) this_week,SUM(status IN ('OPEN','IN_PROGRESS') AND due_at >= NOW() AND due_at < DATE_ADD(NOW(),INTERVAL 1 MONTH)) this_month FROM client_care_follow_ups;
+INSERT IGNORE INTO schema_migrations(version) VALUES ('001_schema'),('002_modules'),('003_dashboard');

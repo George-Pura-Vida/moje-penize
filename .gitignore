@@ -1,6 +1,8 @@
 .env
 .env.*
 !.env.example
+config.php
+.installed
 vendor/
 node_modules/
 *.log
